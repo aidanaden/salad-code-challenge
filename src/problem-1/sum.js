@@ -23,6 +23,6 @@ var sum_to_n_c = function (n) {
   return n + sum_to_n_c(n - 1);
 };
 
-console.log("1: ", sum_to_n_a(3));
-console.log("2: ", sum_to_n_b(3));
-console.log("3: ", sum_to_n_c(3));
+console.log("1: ", sum_to_n_a(5));
+console.log("2: ", sum_to_n_b(5));
+console.log("3: ", sum_to_n_c(5));

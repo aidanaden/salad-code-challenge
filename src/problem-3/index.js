@@ -22,10 +22,12 @@ class Datasource {
     this.source = source;
   }
 
+  // returns json version of fetched data
   jsonifySourceData(data) {
     return data.json();
   }
 
+  // wraps price json objects with Price class
   wrapToPriceObject(priceJsons) {
     const priceObjects = [];
     priceJsons.data.prices.map((price) => {
@@ -35,6 +37,7 @@ class Datasource {
     return priceObjects;
   }
 
+  // returns promise of fetch -> json -> wrap with Price class
   getPrices() {
     return new Promise((resolve, reject) => {
       resolve(
