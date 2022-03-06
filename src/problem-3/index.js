@@ -40,14 +40,10 @@ class Datasource {
       resolve(
         fetch(this.source)
           .then((data) => {
-            return new Promise((resolve, reject) => {
-              resolve(this.jsonifySourceData(data));
-            });
+            return this.jsonifySourceData(data);
           })
           .then((priceJsons) => {
-            return new Promise((resolve, reject) => {
-              resolve(this.wrapToPriceObject(priceJsons));
-            });
+            return his.wrapToPriceObject(priceJsons);
           })
       );
     });
