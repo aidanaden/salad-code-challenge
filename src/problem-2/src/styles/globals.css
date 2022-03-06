@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource/dm-sans/index.css';
+
+@layer base {
+  body {
+    @apply bg-[#0d0415] text-[#bfbfbf];
+  }
+}
+
+@layer components {
+  .generalContainer {
+    @apply mx-4 rounded-[24px] bg-[#202231] p-4 shadow-md shadow-[#0d0415];
+  }
+
+  .form {
+    @apply generalContainer h-fit min-w-[20%] self-center;
+  }
+
+  .formTitle {
+    @apply mb-4 cursor-pointer select-none text-base font-bold leading-5 hover:text-white md:text-lg;
+  }
+
+  .formFieldSection {
+    @apply mb-4 flex flex-col space-y-2;
+  }
+
+  .formFieldLabel {
+    @apply ml-1 flex items-center text-sm font-medium leading-5;
+  }
+
+  .formFieldError {
+    @apply;
+  }
+
+  .formField {
+    @apply block w-full min-w-0
+    appearance-none rounded-[14px] border border-[#2E3348] bg-[#171422] py-3 px-4
+    text-2xl font-bold leading-[36px] outline-none focus:border-[#414A6C] focus:ring-0 active:border-[#414A6C]
+    active:ring-0 hover:border-[#414A6C];
+  }
+
+  .formFieldDisabled {
+    @apply block w-full min-w-0 appearance-none rounded-[14px] border-none bg-[#171422] py-3
+    px-4 text-2xl font-bold leading-[36px] outline-none active:ring-0;
+  }
+
+  .btn {
+    @apply mt-8 flex h-[52px] w-full items-center justify-center gap-1 rounded-xl
+    px-4 font-extrabold text-white transition duration-150 ease-in-out disabled:pointer-events-none
+    disabled:opacity-40 hover:transition-all;
+  }
+
+  .gradientBtn {
+    @apply btn gap-1 rounded-xl !bg-gradient-to-r from-[#0993ec] to-[#e50eae]
+    transition duration-150 ease-in-out
+    disabled:pointer-events-none disabled:opacity-40 hover:bg-gradient-to-b hover:from-[#0993ec]/80 hover:to-[#e50eae]/80;
+  }
+}
