@@ -45,11 +45,25 @@ I was able to come up with 2 methods of solving this problem.
 
 Query the bscscan api endpoint directly.
 
-**pros**:
+Command:
+
+```
+ts-node ./retrieve-holders.ts
+```
+
+Result:
+
+```
+0x0020c5222a24e4a96b720c06b803fb8d34adc0af 0.00000000
+0x123d475e13aa54a43a7421d94caa4459da021c77 574,871.21060275
+0xfe808b079187cc460f47374580f5fb47c82b87a5 0.00000000
+```
+
+pros:
 
 1. Easier since it doesn't require direct connection with the bsc blockchain (no need knowledge of ether.js)
 
-**cons**:
+cons:
 
 1. heavy reliance on bscscan api (centralised)
 2. data may not be accurate since it isn't obtained directly from the bsc blockchain
@@ -58,11 +72,25 @@ Query the bscscan api endpoint directly.
 
 Query the bsc blockchain directly using ether.js
 
-**pros**:
+Command:
+
+```
+ts-node ./retrieve-holders-ether.ts
+```
+
+Result:
+
+```
+0xfe808b079187cc460f47374580f5fb47c82b87a5 0.00000000
+0x0020c5222a24e4a96b720c06b803fb8d34adc0af 0.00000000
+0x123d475e13aa54a43a7421d94caa4459da021c77 574,871.21060275
+```
+
+pros:
 
 1. Less reliant on any single provider (less-centralised)
 2. Data more likely to be accurate since obtained directly from the bsc blockchain
 
-**cons**:
+cons:
 
 1. More difficult to set up since knowledge of ether.js is required
